@@ -202,16 +202,16 @@
         - Dentro da aba "General" selecione o check-box para a função "**Automatically manage singin**".
         - Selecione o "**Team**" no qual você cadastrou no passo [Configuração do Apple ID](#2-configurar-usuário-apple-id-conta-developer-no-xcode)
         
-        ![Singin Webdriver](images for readme/setup_webdriver_with_developer_acc.png)
+        ![Singin Webdriver](/images-for-readme/setup_webdriver_with_developer_acc.png)
 
     - No caso de conflito com o bundle ID existente, como na imagem a seguir:
 
-        **Erro no bundle ID**![error_bundleid](/images for readme/falha_no_bundleid.png)
+        **Erro no bundle ID**![error_bundleid](/images-for-readme/falha_no_bundleid.png)
 
     - Mude para a aba "Build Settings" e procure o pela opção "Packaging" dentro dela procure o campo com o nome "Pruductor Bundle Identifier" e altere o nome do bundle.
         - Exemplo de bundle opcional: **com.inmetrics123.WebDriverAgentRunner**.
 
-        **Mudando nome do bundle ID**![change_bundle_name](/images for readme/mundando_nome_do_bundleid.png)
+        **Mudando nome do bundle ID**![change_bundle_name](/images-for-readme/mundando_nome_do_bundleid.png)
 
     - Na repetição do mesmo erro repita os passos a cima para solucionar o problema.
 
@@ -237,7 +237,7 @@
             - Se dirija a aba **"Devices"** e localize o seu device, caso haja mais de um device conectado.
             - Procure o campo com nome **"Identifier"** este id é o número que você precisa colocar no campo do comando.
             
-            ![window_from_specs_device](/images for readme/janela_specs_device.png)
+            ![window_from_specs_device](/images-for-readme/janela_specs_device.png)
 
         - Resposta esperada após a execução do comando:
         
