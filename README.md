@@ -194,7 +194,7 @@
     - Abra o projeto no Xcode (WebDriverAgent.xcodeproj), após o projeto aberto clique no **WebDriverAgent**, ao clicar nele isso fará a janela dos **TARGETS** abrir, assim poderemos vizualizar alguns deles como `WebDriverAgentLib`, `WebDriverAgentRunner`, `IntegrationApp` repita os passos a seguir para todos os **TARGETS**:
         - No **TARGET** `WebDriverAgentLib` selecione a aba "General".
         - Dentro da aba "General" selecione o check-box para a função "**Automatically manage singin**".
-        - Selecione o "**Team**" no qual você cadastrou no passo [Configuração do Apple ID](#2-configurar-usuário-apple-id-conta-developer-no-xcode)
+        - Selecione o "**Team**" no qual você cadastrou no passo [Configuração do Apple ID](#2--configurar-usu%C3%A1rio-apple-id---conta-developer-no-xcode)
         
         ![Singin Webdriver](/images_for_readme/setup_webdriver_with_developer_acc.png)
 
