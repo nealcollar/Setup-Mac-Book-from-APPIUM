@@ -173,13 +173,7 @@
 * Selecionar usuário da maquina logado
 
 #### 11- Criar build do Webdriver
-* Abrir o "Finder" pressione "command+shift+G" e copie e cole o PATH a seguir:
-
-    ````
-    /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
-    ````
-    
-*  Localize nesta pasta o arquivo "WebDriverAgent.xcodeproj" e siga estes passos:
+*  Localize nos seguintes PATHs o arquivo "WebDriverAgent.xcodeproj" conforme os passos s seguir:
     - Abra o terminal e digite essa lista de comandos:
         - Passo para Appium Desktop:
             
