@@ -254,17 +254,17 @@
     - Após a seleção pressione "Command + Shift + K" ou vá no menu "PRODUCT" e escolha a opção "CLEAN BUILD FOLDER" para limpar o projeto.
     - Agora pressione "Command + B" ou vá no menu "PRODUCT" e escolha a opção "BUILD" para realizar o build, as imagens a seguir mostram a resolução destes passos:
 
-        **Campo para alterar Scheme**![campo de Scheme ](/images_for_readme/field_scheme_set.png)
+		**Campo para alterar Scheme**![campo de Scheme ](/images_for_readme/field_scheme_set.png)
 
-        **Selecionando Scheme e device para BUILD**![seleção do scheme](/images_for_readme/set_scheme_and_device.png)
+		**Selecionando Scheme e device para BUILD**![seleção do scheme](/images_for_readme/set_scheme_and_device.png)
 
-        **Clean BUILD folder**![clean build folder](/images_for_readme/clean_build_folder.png)
+		**Clean BUILD folder**![clean build folder](/images_for_readme/clean_build_folder.png)
 
-        **Realizando BUILD do projeto**![build project](/image_for_readme/build_project.png)
+		**Realizando BUILD do projeto**![build project](/images_for_readme/build_project.png)
     
     - No caso do erro **"MESSAGING UNQUALIFIED ID"**, como na imagem a seguir:
         
-        **Erro dado no XCode após BUILD**![error build xcode](/images_for_readme/error_missing_id.png)
+        	**Erro dado no XCode após BUILD**![error build xcode](/images_for_readme/error_missing_id.png)
 
     - Siga esses passos para resolver esse problema:
         - Click na aba "Show the Project Navigator".
@@ -272,9 +272,9 @@
         - Dentro do arquivo procure o item "GCC_TREAT_WARNINGS_AS_ERRORS" substitua o valor "YES" pelo valor "0".
         - Realize a "CLEAN BUILD FOLDER" e o "BUILD", como foi descrito nos itens a cima, segue as imagens com este fluxo.
 
-            **Localizando e configurando arquivo .xcconfig**![find file in xcode](/images_for_readme/find_and_edit_xcconfing.png)
+            	**Localizando e configurando arquivo .xcconfig**![find file in xcode](/images_for_readme/find_and_edit_xcconfing.png)
 
-            **Erro resolvido**![error solved](/images_for_readme/error_soulved.png)
+            	**Erro resolvido**![error solved](/images_for_readme/error_soulved.png)
 
 
 
