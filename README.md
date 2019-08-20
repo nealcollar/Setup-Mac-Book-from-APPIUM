@@ -25,6 +25,7 @@
     export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk(version java).jdk/Contents/Home"
     export PATH="$PATH:$JAVA_HOME/bin"
     ```
+    - Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
 
 #### 4- Instalar Homebrew
 * Copiar e colar no terminal: 
@@ -89,6 +90,7 @@
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
     export PATH="$PATH:$ANDROID_HOME/tools/bin"
     ````
+    - Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
 
 #### 4- Testar command line (adb, emulator)
 
