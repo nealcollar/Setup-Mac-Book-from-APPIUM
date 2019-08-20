@@ -249,7 +249,36 @@
 
     - Na repetição do mesmo erro repita os passos a cima para solucionar o problema.
 
-* Para verificar se as configurações foram relizadas com sucesso precisamos executar alguns comandos no terminal.
+* Agora vamos limpar o projeto e realizar o build:
+    - Primeiro com o projeto aberto no xcode selecione o **Scheme** que deva realizar o build e o tipo do device que será montado.
+    - Após a seleção pressione "Command + Shift + K" ou vá no menu "PRODUCT" e escolha a opção "CLEAN BUILD FOLDER" para limpar o projeto.
+    - Agora pressione "Command + B" ou vá no menu "PRODUCT" e escolha a opção "BUILD" para realizar o build, as imagens a seguir mostram a resolução destes passos:
+
+        **Campo para alterar Scheme**![campo de Scheme ](/image_for_readme/field_scheme_set.png)
+
+        **Selecionando Scheme e device para BUILD**![seleção do scheme](/images_for_readme/set_scheme_and_device.png)
+
+        **Clean BUILD folder**![clean build folder](/images_for_readme/clean_build_folder.png)
+
+        **Realizando BUILD do projeto**![build project](/image_for_readme/build_project.png)
+    
+    - No caso do erro **"MESSAGING UNQUALIFIED ID"**, como na imagem a seguir:
+        
+        **Erro dado no XCode após BUILD**![error build xcode](/images_for_readme/error_missing_id.png)
+
+    - Siga esses passos para resolver esse problema:
+        - Click na aba "Show the Project Navigator".
+        - Abra a pasta "Configuratios" e abra o arquivo "ProjectSettings.xcconfing".
+        - Dentro do arquivo procure o item "GCC_TREAT_WARNINGS_AS_ERRORS" substitua o valor "YES" pelo valor "0".
+        - Realize a "CLEAN BUILD FOLDER" e o "BUILD", como foi descrito nos itens a cima, segue as imagens com este fluxo.
+
+            **Localizando e configurando arquivo .xcconfig**![find file in xcode](/images_for_readme/find_and_edit_xcconfing.png)
+
+            **Erro resolvido**![error solved](/images_for_readme/ferror_soulved.png)
+
+
+
+* Vamos verificar se as configurações foram relizadas com sucesso, para isso precisamos executar alguns comandos no terminal:
     - Primeiro conecte o celular (Iphone) no MAC-Book
     - Segundo abra o terminal e vá para o diretorio que deseja testar o WebDriverAgente.
         - Testando o Appium Desktop.
