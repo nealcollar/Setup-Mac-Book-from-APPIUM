@@ -264,7 +264,7 @@
     
     - No caso do erro **"MESSAGING UNQUALIFIED ID"**, como na imagem a seguir:
         
-        	**Erro dado no XCode após BUILD**![error build xcode](/images_for_readme/error_missing_id.png)
+        **Erro dado no XCode após BUILD**![error build xcode](/images_for_readme/error_missing_id.png)
 
     - Siga esses passos para resolver esse problema:
         - Click na aba "Show the Project Navigator".
@@ -272,9 +272,9 @@
         - Dentro do arquivo procure o item "GCC_TREAT_WARNINGS_AS_ERRORS" substitua o valor "YES" pelo valor "0".
         - Realize a "CLEAN BUILD FOLDER" e o "BUILD", como foi descrito nos itens a cima, segue as imagens com este fluxo.
 
-            	**Localizando e configurando arquivo .xcconfig**![find file in xcode](/images_for_readme/find_and_edit_xcconfing.png)
+            **Localizando e configurando arquivo .xcconfig**![find file in xcode](/images_for_readme/find_and_edit_xcconfing.png)
 
-            	**Erro resolvido**![error solved](/images_for_readme/error_soulved.png)
+            **Erro resolvido**![error solved](/images_for_readme/error_soulved.png)
 
 
 
