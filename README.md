@@ -82,7 +82,7 @@
 * SDK platforms: Android 6 até mais atual. 
 * SDK tools: Google webdriver, android emulator, android SDK platform-tools, android SDK tools, intel x86 emulator (HAXM).	
 	
-3- Configurar PATH (Android Studio) .bash_profile
+#### 3- Configurar PATH (Android Studio) .bash_profile
 * Copiar e colar no arquivo (.bash_profile): 
     ````
     export ANDROID_HOME="/Users/(username)/Library/Android/sdk"
@@ -100,11 +100,11 @@
     ````
 
 #### 5- Testar Appium desktop
-	- Selecione alguns capability para o device da sua escolha (virtual ou real)
-	- Testar conexão appium e device
+* Selecione alguns capability para o device da sua escolha (virtual ou real)
+* Testar conexão appium e device
  
 #### 6- Testar Appium command line (POC)
-	- Criar script de automação e teste no device da sua escolha (virtual ou real)
+* Criar script de automação e teste no device da sua escolha (virtual ou real)
  
 ## Configuração para iPhone
 
@@ -113,9 +113,9 @@
 #### 2- Configurar usuário (Apple ID - Conta developer) no XCode
 * Abrir XCode
 * Pressione "Command + ,(virgula)" para abrir preferências do XCode
-* Selecione a aba "Accounts" e pressione o + no canto inferior esquerdo da tela e adicione um Apple ID
+* Selecione a aba "Accounts" e pressione o "+" no canto inferior esquerdo da tela e adicione um Apple ID
 
-#### 3- Habilitando configuração desenvolvedor commandline
+#### 3- Habilitando configuração desenvolvedor command line
 * Abrir XCode
 * Pressione "Command + ,(virgula)" para abrir preferências do XCode
 * Selecione a aba "Locations"
