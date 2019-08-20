@@ -274,7 +274,7 @@
 
             **Localizando e configurando arquivo .xcconfig**![find file in xcode](/images_for_readme/find_and_edit_xcconfing.png)
 
-            **Erro resolvido**![error solved](/images_for_readme/ferror_soulved.png)
+            **Erro resolvido**![error solved](/images_for_readme/error_soulved.png)
 
 
 
