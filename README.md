@@ -254,7 +254,7 @@
     - Após a seleção pressione "Command + Shift + K" ou vá no menu "PRODUCT" e escolha a opção "CLEAN BUILD FOLDER" para limpar o projeto.
     - Agora pressione "Command + B" ou vá no menu "PRODUCT" e escolha a opção "BUILD" para realizar o build, as imagens a seguir mostram a resolução destes passos:
 
-        **Campo para alterar Scheme**![campo de Scheme ](/image_for_readme/field_scheme_set.png)
+        **Campo para alterar Scheme**![campo de Scheme ](/images_for_readme/field_scheme_set.png)
 
         **Selecionando Scheme e device para BUILD**![seleção do scheme](/images_for_readme/set_scheme_and_device.png)
 
