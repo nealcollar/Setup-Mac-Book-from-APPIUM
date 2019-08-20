@@ -93,10 +93,18 @@
     - Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
 
 #### 4- Testar command line (adb, emulator)
+* Copiar e colar no terminal: 
+    ````
+    adb
+    emulator
+    ````
 
 #### 5- Testar Appium desktop
+	- Selecione alguns capability para o device da sua escolha (virtual ou real)
+	- Testar conexão appium e device
  
 #### 6- Testar Appium command line (POC)
+	- Criar script de automação e teste no device da sua escolha (virtual ou real)
  
 ## Configuração para iPhone
 
@@ -104,12 +112,12 @@
 
 #### 2- Configurar usuário (Apple ID - Conta developer) no XCode
 * Abrir XCode
-* Pressione "Command+," para abrir preferências do XCode
+* Pressione "Command + ,(virgula)" para abrir preferências do XCode
 * Selecione a aba "Accounts" e pressione o + no canto inferior esquerdo da tela e adicione um Apple ID
 
 #### 3- Habilitando configuração desenvolvedor commandline
 * Abrir XCode
-* Pressione "Command+," para abrir preferências do XCode
+* Pressione "Command + ,(virgula)" para abrir preferências do XCode
 * Selecione a aba "Locations"
 * No campo "Comand Line Tools" selecione a opção XCode
 
@@ -177,20 +185,40 @@
     ````
 
 #### 10- Habilitar modo desenvolvedor para o iPhone
+* Conectar iPhone no Mac
 * Abrir XCode
-* Pressione "Command+," para abrir preferências do XCode
+* Pressione "Command + ,(virgula)" para abrir preferências do XCode
 * Selecione a aba "Server & Bots"
 * Clicar no cadeado para habilitar mudanças (usuário:senha - administrador)
 * Trocar botão Off para On
 * Selecionar usuário da maquina logado
 
 #### 11- Criar build do Webdriver
-*  Localize nos seguintes PATHs o arquivo "WebDriverAgent.xcodeproj" conforme os passos s seguir:
+*  Verifique a existencia do arquivo "WebDriverAgent.xcodeproj",nos seguintes PATHs:
+	
+	- Appium Desktop: 
+	````       
+        /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
+	ou 
+	/Applications/Appium.app/Contents/Resources/app/node_modules/appium-xcuitest-driver/WebDriverAgent
+	````
+	
+	- Appium command line:
+	
+	````       
+	/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
+	ou
+        /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent
+	````
+	
+	- Na falta do arquivo procure pelas pastas **`appium-webdriveragent` , `appium-xcuitest-driver`**:
+
+* Após encontrar o arquivo siga os proximos passos:
     - Abra o terminal e digite essa lista de comandos:
         - Passo para Appium Desktop:
             
             ````       
-            cd /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent 
+            cd "PATH onde o arquivo foi encontrado"
             mkdir -p Resources/WebDriverAgent.bundle
             ./Scripts/bootstrap.sh -d
             ````
@@ -198,7 +226,7 @@
         - Passo para Appium (npm) command line:
         
             ````
-            cd /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/
+            cd "PATH onde o arquivo foi encontrado"
             mkdir -p Resources/WebDriverAgent.bundle
             ./Scripts/bootstrap.sh -d
             ````
@@ -227,14 +255,14 @@
         - Testando o Appium Desktop.
             
             ````
-            cd /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent 
+            cd "PATH onde o arquivo foi encontrado"
             xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>' test
             ````
 
         - Testando o Appium (npm) command line
         
             ````
-            cd /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/
+            cd "PATH onde o arquivo foi encontrado"
             xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>' test
             ````
             
