@@ -32,37 +32,47 @@
     export PATH="$PATH:$JAVA_HOME/bin"
     ```
 
-  * Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
+  * Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#edi%C3%A7%C3%A3o-de-arquivos).
 
-#### 4- Instalar Homebrew
-* Copiar e colar no terminal: 
-    ````
+## 4. Instalar Homebrew
+
+* Copiar e colar no terminal:
+
+    ````bash
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ````
 
-#### 5- Instalar node
-* Copiar e colar no terminal: 
-    ````
+## 5. Instalar node
+
+* Copiar e colar no terminal:
+
+    ````bash
     brew install node
     ````
 
-#### 6- Instalar appium-doctor -g (global)
+## 6. Instalar appium-doctor -g (global)
+
 * Copiar e colar no terminal: 
-    ````
+
+    ````bash
     npm install -g appium-doctor
     ````
 
-#### 7- Instalar Appium Desktop e command line
-* [Appium Desktop](https://github.com/appium/appium-desktop/releases/download/v1.10.0/Appium-1.10.0.dmg) 
-* Appium command line: 
-    ````
+## 7. Instalar Appium Desktop e command line
+
+* [Appium Desktop](https://github.com/appium/appium-desktop/releases).
+  * A versão do Appium recomendada para este projeto é a 1.10.0.
+* Appium command line:
+
+    ````bash
     npm install –g appium@1.10.0
     ````
 
-#### 8- Rodar appium-doctor  
+## 8. Rodar appium-doctor
+
 * Resposta esperada:
 
-    ````
+    ````bash
     info AppiumDoctor ### Diagnostic for necessary dependencies starting ###
     info AppiumDoctor  ✔ The Node.js binary was found at: /usr/local/bin/node
     info AppiumDoctor  ✔ Node version is 12.8.0
@@ -81,7 +91,7 @@
     info AppiumDoctor ### Diagnostic for necessary dependencies completed, 6 fixes needed. ###
     ````
 
-## Configuração para Android
+### Configuração para Android
  
 #### 1- Baixar [Android Studio](https://developer.android.com/studio) 
  
