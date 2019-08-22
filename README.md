@@ -2,20 +2,24 @@
 
 ## 1. Conhecimentos gerais
 
-1. Como acessar pasta root.
-  - Pressione "Shift + Command + C" ou "Shift + Command + G" e digite "/" na caixa de busca e pressione "Return(enter)".
+01. Como acessar pasta root.
 
-1. Acessar itens ocultos
-  - Pressione "Shift + Command + . (ponto)"
+* Pressione "Shift + Command + C" ou "Shift + Command + G" e digite "/" na caixa de busca e pressione "Return(enter)".
 
-1. Criar .bash_profile
-  - Digite no terminal o comando "touch .bash_profile" para criar o arquivo no diretorio "/Users/(UserName)"
+01. Acessar itens ocultos
 
-- Edição de arquivos via terminal
-  - Para editar o documento pode ser feito pelo comando "nano .bash_profile" ou por qualquer editor de codigo que prefira
-  - Agora salve as alterações pressionando "Ctrl + o" e aperte "Return(enter)" para salvar. Então para sair do comando "nano" pressione "Ctrl + x"
+* Pressione "Shift + Command + . (ponto)"
 
-1. Baixar java JRE e JDK
+01. Criar .bash_profile
+
+* Digite no terminal o comando "touch .bash_profile" para criar o arquivo no diretorio "/Users/(UserName)"
+
+01. Edição de arquivos via terminal
+  
+* Para editar o documento pode ser feito pelo comando "nano .bash_profile" ou por qualquer editor de codigo que prefira
+* Agora salve as alterações pressionando "Ctrl + o" e aperte "Return(enter)" para salvar. Então para sair do comando "nano" pressione "Ctrl + x"
+
+## 2. Baixar java JRE e JDK
 
 - [Java Link](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) - Versão recomendada java 1.8.0_221
  
