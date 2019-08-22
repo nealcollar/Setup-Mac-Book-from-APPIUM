@@ -1,14 +1,14 @@
 # Configuração Mac
 
-# ATX style 1. Conhecimentos gerais
+## 1. Conhecimentos gerais
 
-- Como acessar pasta root.
+1. Como acessar pasta root.
   - Pressione "Shift + Command + C" ou "Shift + Command + G" e digite "/" na caixa de busca e pressione "Return(enter)".
 
-- Acessar itens ocultos
+1. Acessar itens ocultos
   - Pressione "Shift + Command + . (ponto)"
 
-- Criar .bash_profile
+1. Criar .bash_profile
   - Digite no terminal o comando "touch .bash_profile" para criar o arquivo no diretorio "/Users/(UserName)"
 
 - Edição de arquivos via terminal
