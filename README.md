@@ -313,14 +313,14 @@
 
   * Siga esses passos para resolver esse problema:
     * Feche o XCode precionando `Command + Q`.
-    * Abra o **"Finder"** e vá para a pasta do XCode (DeliveredData).
+    * Abra o **"Finder"** e vá para a pasta do XCode (DeliveredData) e apague a pasata do **BUILD** (WebDriverAgente-...) .
 
         ```bash
         /Users/automacaoinmetrics/Library/Developer/Xcode/DerivedData
         ```
 
-      * Caso não lembre como abrir facilmente o PATH no **"Finder"** volte em [Conhecimentos gerais](#1--conhecimentos-gerais) .
-    * Vá até a pasta do `WebDriverAgent` e no  apague todo o conteúdo dentro dela e copie todo o projeto do xcode do `appium command line` (caminho foi espeficicado a cima)
+      * Caso não lembre como abrir facilmente o PATH no **"Finder"** volte em ["Como acessar pasta root"](#como-acessar-pasta-root) .
+    * Vá até a pasta do `WebDriverAgent` e no  apague todo o conteúdo de dentro dela e copie todo o projeto (WebDriverAgent) do xcode do `appium command line` (caminhos foram especificados a cima) e repita o processo de **BUILD** descrito anteriormente.
 
 * Vamos verificar se as configurações foram relizadas com sucesso, para isso precisamos executar alguns comandos no terminal:
   * Primeiro conecte o celular (Iphone) no MAC-Book
