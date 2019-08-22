@@ -1,6 +1,6 @@
 # Configuração Mac
 
-1. Conhecimentos gerais
+# ATX style 1. Conhecimentos gerais
 
 - Como acessar pasta root.
   - Pressione "Shift + Command + C" ou "Shift + Command + G" e digite "/" na caixa de busca e pressione "Return(enter)".
