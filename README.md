@@ -14,23 +14,25 @@
 
 * Digite no terminal o comando "touch .bash_profile" para criar o arquivo no diretorio "/Users/(UserName)"
 
-### Edição de arquivos via terminal
+### Edição de arquivos
   
 * Para editar o documento pode ser feito pelo comando "nano .bash_profile" ou por qualquer editor de codigo que prefira
 * Agora salve as alterações pressionando "Ctrl + o" e aperte "Return(enter)" para salvar. Então para sair do comando "nano" pressione "Ctrl + x"
 
-## 2. Baixar java JRE e JDK
+## 2. Baixar java JDK
 
-- [Java Link](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) - Versão recomendada java 1.8.0_221
- 
-#### 3- Configurar PATH (Java) .bash_profile 
-* Abra o arquivo (.bash_profile) e digite os códigos a seguir: 
+* [Java Link](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) - Versão recomendada java 1.8.0_221
 
-    ```
+## 3. Configurar PATH (Java) .bash_profile
+
+* Abra o arquivo (.bash_profile) e digite os códigos a seguir:
+
+    ```bash
     export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk(version java).jdk/Contents/Home"
     export PATH="$PATH:$JAVA_HOME/bin"
     ```
-    - Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
+
+  * Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
 
 #### 4- Instalar Homebrew
 * Copiar e colar no terminal: 
