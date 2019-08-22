@@ -2,19 +2,19 @@
 
 ## 1. Conhecimentos gerais
 
-01. Como acessar pasta root.
+### Como acessar pasta root
 
 * Pressione "Shift + Command + C" ou "Shift + Command + G" e digite "/" na caixa de busca e pressione "Return(enter)".
 
-01. Acessar itens ocultos
+### Acessar itens ocultos
 
 * Pressione "Shift + Command + . (ponto)"
 
-01. Criar .bash_profile
+### Criar .bash_profile
 
 * Digite no terminal o comando "touch .bash_profile" para criar o arquivo no diretorio "/Users/(UserName)"
 
-01. Edição de arquivos via terminal
+### Edição de arquivos via terminal
   
 * Para editar o documento pode ser feito pelo comando "nano .bash_profile" ou por qualquer editor de codigo que prefira
 * Agora salve as alterações pressionando "Ctrl + o" e aperte "Return(enter)" para salvar. Então para sair do comando "nano" pressione "Ctrl + x"
