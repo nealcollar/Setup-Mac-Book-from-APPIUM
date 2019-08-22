@@ -126,7 +126,7 @@
 
 * Selecione alguns capability para o device da sua escolha (virtual ou real)
 * Testar conexão appium e device
- 
+
 ### 6. Testar Appium command line (POC)
 
 * Criar script de automação e teste no device da sua escolha (virtual ou real)
@@ -239,109 +239,116 @@
   * Appium Desktop:
 
     ````bash
-        /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
+    /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
 
-        ou
+    ou
 
-        /Applications/Appium.app/Contents/Resources/app/node_modules/appium-xcuitest-driver/WebDriverAgent
+    /Applications/Appium.app/Contents/Resources/app/node_modules/appium-xcuitest-driver/WebDriverAgent
     ````
 
   * Appium command line:
 
     ````bash
-        /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
+    /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
 
-        ou
+    ou
 
-        /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent
+    /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent
     ````
 
   * Na falta do arquivo procure pelas pastas **`appium-webdriveragent` , `appium-xcuitest-driver`**:
 
 * Após encontrar o arquivo siga os proximos passos:
   * Abra o terminal e digite essa lista de comandos:
-        + Passo para Appium Desktop:
+    * Passo para Appium Desktop:
 
-    ````bash
+        ````bash
         cd "PATH onde o arquivo foi encontrado"
         mkdir -p Resources/WebDriverAgent.bundle
         ./Scripts/bootstrap.sh -d
-    ````
+        ````
 
-        - Passo para Appium (npm) command line:
-        
-            ````
-            cd "PATH onde o arquivo foi encontrado"
-            mkdir -p Resources/WebDriverAgent.bundle
-            ./Scripts/bootstrap.sh -d
-            ````
-            
-    - Abra o projeto no Xcode (WebDriverAgent.xcodeproj), após o projeto aberto clique no **WebDriverAgent**, ao clicar nele isso fará a janela dos **TARGETS** abrir, assim poderemos vizualizar alguns deles como `WebDriverAgentLib`, `WebDriverAgentRunner`, `IntegrationApp` repita os passos a seguir para todos os **TARGETS**:
-        - No **TARGET** `WebDriverAgentLib` selecione a aba "General".
-        - Dentro da aba "General" selecione o check-box para a função "**Automatically manage singin**".
-        - Selecione o "**Team**" no qual você cadastrou no passo [Configuração do Apple ID](#2--configurar-usu%C3%A1rio-apple-id---conta-developer-no-xcode)
-        
-        ![Singin Webdriver](/images_for_readme/setup_webdriver_with_developer_acc.png)
+    * Passo para Appium (npm) command line:
 
-    - No caso de conflito com o bundle ID existente, como na imagem a seguir:
+        ````bash
+        cd "PATH onde o arquivo foi encontrado"
+        mkdir -p Resources/WebDriverAgent.bundle
+        ./Scripts/bootstrap.sh -d
+        ````
+
+  * Abra o projeto no Xcode (WebDriverAgent.xcodeproj), após o projeto aberto clique no **WebDriverAgent**, ao clicar nele isso fará a janela dos **TARGETS** abrir, assim poderemos vizualizar alguns deles como `WebDriverAgentLib`, `WebDriverAgentRunner`, `IntegrationApp` repita os passos a seguir para todos os **TARGETS**:
+    * No **TARGET** `WebDriverAgentLib` selecione a aba "General".
+    * Dentro da aba "General" selecione o check-box para a função "**Automatically manage singin**".
+    * Selecione o "**Team**" no qual você cadastrou no passo [Configuração do Apple ID](#2-configurar-usu%C3%A1rio-apple-id---conta-developer-no-xcode)
+
+        **Habilitando assinatura automatica**![Singin Webdriver](/images_for_readme/setup_webdriver_with_developer_acc.png)
+
+    * No caso de conflito com o bundle ID existente, como na imagem a seguir:
 
         **Erro no bundle ID**![error_bundleid](/images_for_readme/falha_no_bundleid.png)
 
-    - Mude para a aba "Build Settings" e procure o pela opção "Packaging" dentro dela procure o campo com o nome "Pruductor Bundle Identifier" e altere o nome do bundle.
-        - Exemplo de bundle opcional: **com.inmetrics123.WebDriverAgentRunner**.
+    * Mude para a aba `Build Settings` e procure o pela opção `Packaging` dentro dela procure o campo com o nome "Pruductor Bundle Identifier" e altere o nome do bundle.
+      * Exemplo de bundle opcional: **com.inmetrics123.WebDriverAgentRunner**.
 
         **Mudando nome do bundle ID**![change_bundle_name](/images_for_readme/mundando_nome_do_bundleid.png)
 
-    - Na repetição do mesmo erro repita os passos a cima para solucionar o problema.
+  * Na repetição do mesmo erro repita os passos a cima para solucionar o problema.
 
 * Agora vamos limpar o projeto e realizar o build:
-    - Primeiro com o projeto aberto no xcode selecione o **Scheme** que deva realizar o build e o tipo do device que será montado.
-    - Após a seleção pressione "Command + Shift + K" ou vá no menu "PRODUCT" e escolha a opção "CLEAN BUILD FOLDER" para limpar o projeto.
-    - Agora pressione "Command + B" ou vá no menu "PRODUCT" e escolha a opção "BUILD" para realizar o build, as imagens a seguir mostram a resolução destes passos:
+  * Primeiro com o projeto aberto no xcode selecione o **Scheme** que deva realizar o build e o tipo do device que será montado.
+  * Após a seleção pressione `Command + Shift + K` ou vá no menu **"PRODUCT"** e escolha a opção **"CLEAN BUILD FOLDER"** para limpar o projeto.
+  * Agora pressione `Command + B` ou vá no menu **"PRODUCT"** e escolha a opção **"BUILD"** para realizar o build, as imagens a seguir mostram a resolução destes passos:
 
-		**Campo para alterar Scheme**![campo de Scheme ](/images_for_readme/field_scheme_set.png)
+    **Campo para alterar Scheme**![campo de Scheme ](/images_for_readme/field_scheme_set.png)
 
-		**Selecionando Scheme e device para BUILD**![seleção do scheme](/images_for_readme/set_scheme_and_device.png)
+    **Selecionando Scheme e device para BUILD**![seleção do scheme](/images_for_readme/set_scheme_and_device.png)
 
-		**Clean BUILD folder**![clean build folder](/images_for_readme/clean_build_folder.png)
+    **Clean BUILD folder**![clean build folder](/images_for_readme/clean_build_folder.png)
 
-        **Realizando BUILD do projeto**![build project](/images_for_readme/build_project.png)
-    
-    - No caso do erro **"MESSAGING UNQUALIFIED ID"**, como na imagem a seguir:
-        
+    **Realizando BUILD do projeto**![build project](/images_for_readme/build_project.png)
+
+    * No caso do erro **"MESSAGING UNQUALIFIED ID"**, como na imagem a seguir:
+
         **Erro dado no XCode após BUILD**![error build xcode](/images_for_readme/error_missing_id.png)
 
-    - Siga esses passos para resolver esse problema:
-        - A
+  * Siga esses passos para resolver esse problema:
+    * Feche o XCode precionando `Command + Q`.
+    * Abra o **"Finder"** e vá para a pasta do XCode (DeliveredData).
 
+        ```bash
+        /Users/automacaoinmetrics/Library/Developer/Xcode/DerivedData
+        ```
+
+      * Caso não lembre como abrir facilmente o PATH no **"Finder"** volte em [Conhecimentos gerais](#1--conhecimentos-gerais) .
+    * Vá até a pasta do `WebDriverAgent` e no  apague todo o conteúdo dentro dela e copie todo o projeto do xcode do `appium command line` (caminho foi espeficicado a cima)
 
 * Vamos verificar se as configurações foram relizadas com sucesso, para isso precisamos executar alguns comandos no terminal:
-    - Primeiro conecte o celular (Iphone) no MAC-Book
-    - Segundo abra o terminal e vá para o diretorio que deseja testar o WebDriverAgente.
-        - Testando o Appium Desktop.
-            
-            ````
-            cd "PATH onde o arquivo foi encontrado"
-            xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>' test
-            ````
+  * Primeiro conecte o celular (Iphone) no MAC-Book
+  * Segundo abra o terminal e vá para o diretorio que deseja testar o WebDriverAgente.
+    * Testando o Appium Desktop.
 
-        - Testando o Appium (npm) command line
-        
-            ````
-            cd "PATH onde o arquivo foi encontrado"
-            xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>' test
-            ````
-            
-        - Lembrando o campo **'id=udid'**, você deve pegar o id do celular após conectado no MAC-Book.
-            - Para pegar os dados do celular conectado abra o XCode e pressione "Command+SHIFT+2", isso fará abrir a janela de devices/simuladores
-            - Se dirija a aba **"Devices"** e localize o seu device, caso haja mais de um device conectado.
-            - Procure o campo com nome **"Identifier"** este id é o número que você precisa colocar no campo do comando.
-            
-            ![window_from_specs_device](/images_for_readme/janela_specs_device.png)
+        ````bash
+        cd "PATH onde o arquivo foi encontrado"
+        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>' test
+        ````
 
-        - Resposta esperada após a execução do comando:
-        
-            ````
+    * Testando o Appium (npm) command line
+
+        ````bash
+        cd "PATH onde o arquivo foi encontrado"
+        xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=<udid>' test
+        ````
+
+      * Lembrando o campo **'id=udid'**, você deve pegar o id do celular após conectado no MAC-Book.
+        * Para pegar os dados do celular conectado abra o XCode e pressione "Command+SHIFT+2", isso fará abrir a janela de devices/simuladores
+        * Se dirija a aba **"Devices"** e localize o seu device, caso haja mais de um device conectado.
+        * Procure o campo com nome **"Identifier"** este id é o número que você precisa colocar no campo do comando.
+
+            **Janela de especificações do device**![window_from_specs_device](/images_for_readme/janela_specs_device.png)
+
+        * Resposta esperada após a execução do comando:
+
+            ````bash
             Test Suite 'All tests' started at 2017-01-23 15:49:12.585
             Test Suite 'WebDriverAgentRunner.xctest' started at 2017-01-23 15:49:12.586
             Test Suite 'UITestingUITests' started at 2017-01-23 15:49:12.587
@@ -349,43 +356,39 @@
                 t =     0.00s     Start Test at 2017-01-23 15:49:12.588
                 t =     0.00s     Set Up
             ````
- 
-            - Para verificar se tudo ocorreu bem (lembrando o comando na aba anterior precisa estar em execução), abra outra aba no terminal e siga esses passos:
-            
-                ````
-                export DEVICE_URL='http://<device IP>:8100'
-                export JSON_HEADER='-H "Content-Type: application/json;charset=UTF-8, accept: application/json"'
-                curl -X GET $JSON_HEADER $DEVICE_URL/status
-                ````
-            
-                - Para pegar o **device IP** abra o celular e siga o caminho Ajustes=>Wi-Fi=>Rede atual conectada.
-                - Quando executar o ultimo comando a seguinte resposta deve aparecer (lembrando que somente a estrutura deve parecer a mesma, não os resultados em cada campo) .
-                    
-                    ````
-                    {
-                      "value" : {
-                        "state" : "success",
-                        "os" : {
-                          "name" : "iOS",
-                          "version" : "12.4",
-                          "sdkVersion" : "12.2"
-                        },
-                        "ios" : {
-                          "simulatorVersion" : "12.4",
-                          "ip" : "192.168.15.31"
-                        },
-                        "build" : {
-                          "time" : "Aug 18 2019 11:25:25",
-                          "productBundleIdentifier" : "com.facebook.WebDriverAgentRunner"
-                        }
-                      },
-                      "sessionId" : "CBD5B219-90D6-45CD-A672-66E707916F85",
-                      "status" : 0
-                    }
-                    ````
-                    
-    - **Lembrete, para cada usuário que for realizar automação deve ser feito este mesmo passo a passo da [inicialização do WebDriverAgent](#11--criar-build-do-webdriver)**
-                
-                
-                
-                
+
+        * Para testar se tudo ocorreu bem (lembrando o comando na aba anterior precisa estar em execução), abra outra aba no terminal e siga esses passos:
+
+            ````bash
+            export DEVICE_URL='http://<device IP>:8100'
+            export JSON_HEADER='-H "Content-Type: application/json;charset=UTF-8, accept: application/json"'
+            curl -X GET $JSON_HEADER $DEVICE_URL/status
+            ````
+
+          * Para pegar o **device IP** abra o celular e siga o caminho Ajustes=>Wi-Fi=>Rede atual conectada.
+          * Quando executar o ultimo comando a seguinte resposta deve aparecer (lembrando que somente a estrutura deve parecer a mesma, não os resultados em cada campo) .
+
+            ````bash
+            {
+                "value" : {
+                "state" : "success",
+                "os" : {
+                    "name" : "iOS",
+                    "version" : "12.4",
+                    "sdkVersion" : "12.2"
+                },
+                "ios" : {
+                    "simulatorVersion" : "12.4",
+                    "ip" : "192.168.15.31"
+                },
+                "build" : {
+                    "time" : "Aug 18 2019 11:25:25",
+                    "productBundleIdentifier" : "com.facebook.WebDriverAgentRunner"
+                }
+                },
+                "sessionId" : "CBD5B219-90D6-45CD-A672-66E707916F85",
+                "status" : 0
+            }
+            ````
+
+* **Lembrete, para cada usuário que for realizar automação deve ser feito este mesmo passo a passo da [inicialização do WebDriverAgent](#11--criar-build-do-webdriver)**
