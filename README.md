@@ -91,87 +91,108 @@
     info AppiumDoctor ### Diagnostic for necessary dependencies completed, 6 fixes needed. ###
     ````
 
-### Configuração para Android
- 
-#### 1- Baixar [Android Studio](https://developer.android.com/studio) 
- 
-#### 2- Inicializar e configurar Android Studio (SDK Manager)
-* SDK platforms: Android 6 até mais atual. 
-* SDK tools: Google webdriver, android emulator, android SDK platform-tools, android SDK tools, intel x86 emulator (HAXM).	
-	
-#### 3- Configurar PATH (Android Studio) .bash_profile
-* Copiar e colar no arquivo (.bash_profile): 
-    ````
+## Configuração para Android
+
+### 1. Baixar [Android Studio](https://developer.android.com/studio)
+
+### 2. Inicializar e configurar Android Studio (SDK Manager)
+
+* SDK platforms: Android 6 até mais atual.
+* SDK tools: Google webdriver, android emulator, android SDK platform-tools, android SDK tools, intel x86 emulator (HAXM).
+
+### 3. Configurar PATH (Android Studio) .bash_profile
+
+* Copiar e colar no arquivo (.bash_profile):
+
+    ````bash
     export ANDROID_HOME="/Users/(username)/Library/Android/sdk"
     export PATH="$PATH:$ANDROID_HOME/emulator"
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
     export PATH="$PATH:$ANDROID_HOME/tools/bin"
     ````
-    - Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
 
-#### 4- Testar command line (adb, emulator)
+  * Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
+
+### 4. Testar command line (adb, emulator)
+
 * Copiar e colar no terminal: 
-    ````
+
+    ````bash
     adb
     emulator
     ````
 
-#### 5- Testar Appium desktop
+### 5. Testar Appium desktop
+
 * Selecione alguns capability para o device da sua escolha (virtual ou real)
 * Testar conexão appium e device
  
-#### 6- Testar Appium command line (POC)
+### 6. Testar Appium command line (POC)
+
 * Criar script de automação e teste no device da sua escolha (virtual ou real)
- 
+
 ## Configuração para iPhone
 
-#### 1- Instalar/Atualizar XCode via AppleStore
+### 1. Instalar/Atualizar XCode via AppleStore
 
-#### 2- Configurar usuário (Apple ID - Conta developer) no XCode
+### 2. Configurar usuário (Apple ID - Conta developer) no XCode
+
 * Abrir XCode
 * Pressione "Command + ,(virgula)" para abrir preferências do XCode
 * Selecione a aba "Accounts" e pressione o "+" no canto inferior esquerdo da tela e adicione um Apple ID
 
-#### 3- Habilitando configuração desenvolvedor command line
+### 3. Habilitando configuração desenvolvedor command line
+
 * Abrir XCode
 * Pressione "Command + ,(virgula)" para abrir preferências do XCode
 * Selecione a aba "Locations"
 * No campo "Comand Line Tools" selecione a opção XCode
 
-#### 4- Instalar Carthage
-* Copiar e colar no terminal: 
-    ````
+### 4. Instalar Carthage
+
+* Copiar e colar no terminal:
+
+    ````bash
     brew install carthage
     ````
 
-#### 5- Instalar authorize-ios 
-* Copiar e colar no terminal: 
-    ````
+### 5. Instalar authorize-ios
+
+* Copiar e colar no terminal:
+
+    ````bash
     npm install -g authorize-ios
     ````
 
-#### 6- Instalar iOS deploy 
-* Copiar e colar no terminal: 
-    ````
+### 6. Instalar iOS deploy
+
+* Copiar e colar no terminal:
+
+    ````bash
     brew install ios-deploy
     ````
 
-#### 7- Instalar ideviceinstaller
-* Copiar e colar no terminal: 
-    ````
+### 7. Instalar ideviceinstaller
+
+* Copiar e colar no terminal:
+
+    ````bash
     brew install ideviceinstaller
     ````
 
-#### 8- Instalar ios-webkit-debug-proxy
-* Copiar e colar no terminal: 
-    ````
+### 8 Instalar ios-webkit-debug-proxy
+
+* Copiar e colar no terminal:
+
+    ````bash
     brew install ios-webkit-debug-proxy
     ````
 
-#### 9- Rodar appium-doctor
+### 9. Rodar appium-doctor
+
 * Resposta esperada
 
-    ````
+    ````bash
     info AppiumDoctor Appium Doctor v.1.11.1
     info AppiumDoctor ### Diagnostic for necessary dependencies starting ###
     info AppiumDoctor  ✔ The Node.js binary was found at: /usr/local/bin/node
@@ -201,7 +222,8 @@
     info AppiumDoctor  ✔ ios_webkit_debug_proxy is installed at: /usr/local/bin/ios_webkit_debug_proxy. Installed version is: 1.8.5, Built with libimobiledevice v1.2.0, libplist v2.0.0
     ````
 
-#### 10- Habilitar modo desenvolvedor para o iPhone
+### 10. Habilitar modo desenvolvedor para o iPhone
+
 * Conectar iPhone no Mac
 * Abrir XCode
 * Pressione "Command + ,(virgula)" para abrir preferências do XCode
@@ -210,35 +232,41 @@
 * Trocar botão Off para On
 * Selecionar usuário da maquina logado
 
-#### 11- Criar build do Webdriver
-*  Verifique a existencia do arquivo "WebDriverAgent.xcodeproj",nos seguintes PATHs:
-	
-	- Appium Desktop: 
-	````       
+### 11- Criar build do Webdriver
+
+* Verifique a existencia do arquivo "WebDriverAgent.xcodeproj",nos seguintes PATHs:
+
+  * Appium Desktop:
+
+    ````bash
         /Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
-	ou 
-	/Applications/Appium.app/Contents/Resources/app/node_modules/appium-xcuitest-driver/WebDriverAgent
-	````
-	
-	- Appium command line:
-	
-	````       
-	/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
-	ou
+
+        ou
+
+        /Applications/Appium.app/Contents/Resources/app/node_modules/appium-xcuitest-driver/WebDriverAgent
+    ````
+
+  * Appium command line:
+
+    ````bash
+        /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
+
+        ou
+
         /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent
-	````
-	
-	- Na falta do arquivo procure pelas pastas **`appium-webdriveragent` , `appium-xcuitest-driver`**:
+    ````
+
+  * Na falta do arquivo procure pelas pastas **`appium-webdriveragent` , `appium-xcuitest-driver`**:
 
 * Após encontrar o arquivo siga os proximos passos:
-    - Abra o terminal e digite essa lista de comandos:
-        - Passo para Appium Desktop:
-            
-            ````       
-            cd "PATH onde o arquivo foi encontrado"
-            mkdir -p Resources/WebDriverAgent.bundle
-            ./Scripts/bootstrap.sh -d
-            ````
+  * Abra o terminal e digite essa lista de comandos:
+        + Passo para Appium Desktop:
+
+    ````bash
+        cd "PATH onde o arquivo foi encontrado"
+        mkdir -p Resources/WebDriverAgent.bundle
+        ./Scripts/bootstrap.sh -d
+    ````
 
         - Passo para Appium (npm) command line:
         
