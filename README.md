@@ -1,22 +1,23 @@
 # Configuração Mac
- 
-#### 1- Conhecimentos gerais
 
-- Como acessar pasta root 
-	- Pressione "Shift + Command + C" ou "Shift + Command + G" e digite "/" na caixa de busca e pressione "Return(enter)". 
-	
+1. Conhecimentos gerais
+
+- Como acessar pasta root.
+  - Pressione "Shift + Command + C" ou "Shift + Command + G" e digite "/" na caixa de busca e pressione "Return(enter)".
+
 - Acessar itens ocultos
-	- Pressione "Shift + Command + . (ponto)"
+  - Pressione "Shift + Command + . (ponto)"
 
 - Criar .bash_profile
-	- Digite no terminal o comando "touch .bash_profile" para criar o arquivo no diretorio "/Users/(UserName)"
-	
-- Edição de arquivos via terminal
-	- Para editar o documento pode ser feito pelo comando "nano .bash_profile" ou por qualquer editor de codigo que prefira
-	- Agora salve as alterações pressionando "Ctrl + o" e aperte "Return(enter)" para salvar. Então para sair do comando "nano" pressione "Ctrl + x"
+  - Digite no terminal o comando "touch .bash_profile" para criar o arquivo no diretorio "/Users/(UserName)"
 
-#### 2- Baixar java JRE e JDK
-* [Java Link](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) - Versão recomendada java 1.8.0_221
+- Edição de arquivos via terminal
+  - Para editar o documento pode ser feito pelo comando "nano .bash_profile" ou por qualquer editor de codigo que prefira
+  - Agora salve as alterações pressionando "Ctrl + o" e aperte "Return(enter)" para salvar. Então para sair do comando "nano" pressione "Ctrl + x"
+
+1. Baixar java JRE e JDK
+
+- [Java Link](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) - Versão recomendada java 1.8.0_221
  
 #### 3- Configurar PATH (Java) .bash_profile 
 * Abra o arquivo (.bash_profile) e digite os códigos a seguir: 
@@ -260,22 +261,14 @@
 
 		**Clean BUILD folder**![clean build folder](/images_for_readme/clean_build_folder.png)
 
-		**Realizando BUILD do projeto**![build project](/images_for_readme/build_project.png)
+        **Realizando BUILD do projeto**![build project](/images_for_readme/build_project.png)
     
     - No caso do erro **"MESSAGING UNQUALIFIED ID"**, como na imagem a seguir:
         
         **Erro dado no XCode após BUILD**![error build xcode](/images_for_readme/error_missing_id.png)
 
     - Siga esses passos para resolver esse problema:
-        - Click na aba "Show the Project Navigator".
-        - Abra a pasta "Configuratios" e abra o arquivo "ProjectSettings.xcconfing".
-        - Dentro do arquivo procure o item "GCC_TREAT_WARNINGS_AS_ERRORS" substitua o valor "YES" pelo valor "0".
-        - Realize a "CLEAN BUILD FOLDER" e o "BUILD", como foi descrito nos itens a cima, segue as imagens com este fluxo.
-
-            **Localizando e configurando arquivo .xcconfig**![find file in xcode](/images_for_readme/find_and_edit_xcconfing.png)
-
-            **Erro resolvido**![error solved](/images_for_readme/error_soulved.png)
-
+        - A
 
 
 * Vamos verificar se as configurações foram relizadas com sucesso, para isso precisamos executar alguns comandos no terminal:
