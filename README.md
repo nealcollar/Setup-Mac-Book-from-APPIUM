@@ -313,7 +313,7 @@
 
   * Siga esses passos para resolver esse problema:
     * Feche o XCode precionando `Command + Q`.
-    * Abra o **"Finder"** e vá para a pasta do XCode (DeliveredData) e apague a pasata do **BUILD** (WebDriverAgente-...) .
+    * Abra o **"Finder"** e vá para a pasta do XCode (DeliveredData) e apague a pasta do **BUILD** (WebDriverAgente-...) em:
 
         ```bash
         /Users/automacaoinmetrics/Library/Developer/Xcode/DerivedData
