@@ -32,7 +32,7 @@
     export PATH="$PATH:$JAVA_HOME/bin"
     ```
 
-  * Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#edi%C3%A7%C3%A3o-de-arquivos).
+  * Para adicionar esses PATHs siga os passos em ["Edição de arquivos"](#edi%C3%A7%C3%A3o-de-arquivos).
 
 ## 4. Instalar Homebrew
 
@@ -111,7 +111,7 @@
     export PATH="$PATH:$ANDROID_HOME/tools/bin"
     ````
 
-  * Para adicionar esses PATHs siga os passos em [Conhecimentos gerais](#1--conhecimentos-gerais).
+  * Para adicionar esses PATHs siga os passos em ["Edição de arquivos"](#edi%C3%A7%C3%A3o-de-arquivos).
 
 ### 4. Testar command line (adb, emulator)
 
